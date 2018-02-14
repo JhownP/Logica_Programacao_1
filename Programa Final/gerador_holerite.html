@@ -1,0 +1,201 @@
+<meta charset="utf-8">
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Gerador de Holerite
+	</title>
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-customer.css">
+	
+	<!-- Font Awesome 5.0.6 -->
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fa-brands.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fa-brands.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fa-regular.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fa-regular.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fa-solid.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fa-solid.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.min.css">
+
+<!-- 	<script type="text/javascript">
+		
+		setOperacao();
+
+		// Teste de Cardialidade
+		function getHora() {
+			var date = new Date();
+			var hours = date.getHours();
+
+			if (hours >= 0 && hours <= 5){
+				return ("Boa Noite! ");
+			} else if (hours <= 11){
+				return ("Boa Dia! ");
+			} else if (hours <= 17){
+				return ("Boa Tarde! ");
+			} else {
+				return ("Boa Noite! ");
+			}
+		}
+
+		// Operação de Criar ou Logar
+		function setOperacao() {
+			var testa_operacao = true;
+
+			while (testa_operacao != false){
+				var operacao = prompt(getHora() + "\nGerador de Holerite \n1 - Criar Conta \n2 - Logar \nPara prosseguir necessita-se efetuar o seu Login:");
+				if (operacao == 1){
+					// Criando um novo usuário
+					var nome = prompt("Nome ");
+					var login = prompt(nome + " Qual será seu Login? ");
+					var senha = prompt(nome + " Qual será sua Senha? ");
+					criaConta(nome, login, senha);
+
+				} else if (operacao == 2){
+					// Comparação de Usuário Criado Anteiormente
+				    var loginPadrao = "icozweb";
+				    var senhaPadrao = "icozweb1234";
+				    var maximoTentativas = 3;
+				    var tentativaAtual = 1;
+
+				    while(tentativaAtual <= maximoTentativas) {
+				        var loginInformado = prompt("Informe seu login");
+				        var senhaInformada = prompt("Informe sua senha");
+
+				        if( (login = loginPadrao) == loginInformado && (senha = senhaPadrao) == senhaInformada ) {
+				            alert("Bem-vindo ao sistema, " + loginInformado);
+				            testa_operacao = false;
+				            break;
+				        } else {
+				            alert("Login inválido. Tente novamente");
+				        }
+				    	tentativaAtual = tentativaAtual +1;
+				    }
+				    if (tentativaAtual >= 3){
+				    	alert("Máximo de tentativas foi excedido");
+						testa_operacao = true;
+					}
+
+				} else {
+					alert("Número Inválido!");
+					testa_operacao = true;
+				}
+			}						
+		}
+
+		function criaConta(nome, login, senha) {
+			return alert(nome + " Conta Criada com sucesso! \nLogue com: " + login + " e a senha criada!");
+		}
+	</script>
+ -->
+	<script type="text/javascript" >
+		function apagaForm() {
+			condicao = confirm("Deseja mesmo Limpar os Formularios?");
+			if (condicao) {
+				document.getElementById('nameForm').value="";
+				document.getElementById('departamentoForm').selectedIndex;
+				document.getElementById('horaForm').value="";
+				document.getElementById('salarioForm').value="";
+			}
+		}
+	</script>
+</head>
+<body>
+	<header class="menu-principal">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  		<a class="navbar-brand" href="#">
+	    		<img src="midia/img/jhown_estudos.png" width="75" height="40" alt="">
+	  		</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+
+	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    		<ul class="navbar-nav mr-auto">
+	      			<li class="nav-item active">
+	        			<a class="nav-link" href="gerador_holerite.html">Gerador de Holerite <span class="badge badge-secondary" style="background-color: #ff7800;">Beta</span></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link disabled" href="#">Gerador de CPF</a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link disabled" href="#">Gerador de CNPJ</a>
+	      			</li>
+	    		</ul>
+	    		<form class="form-inline my-2 my-lg-0">
+	      			<a href="https://github.com/JhownP" class="fab fa-github pt-3 pb-3 pl-4 pr-4 text-light badge badge-primary" target=“_blank”> &nbspGitHub </a>
+	    		</form>
+	  		</div>
+		</nav>
+	</header>
+	<!-- Inicia o Layout -->
+	<section class="corpo-site">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mt-md-3 mb-md-3">
+					<h2 class="title text-center text-dark">Gerador de Holerite</h2>	
+				</div>
+				<form class="col-md-12 pr-md-0 pl-md-0">
+					<div class="form-group">
+				    	<input type="text*" id="nameForm" class="form-control bg-light border border-primary" placeholder="Informe o Nome*">
+				    	<small class="form-text text-muted">Insira o Nome do Funcionário.</small>
+				  	</div>
+				  	<div class="form-group" id="departamentoForm">
+				        <select class="custom-select bg-light border border-primary">
+					        <option selected>Selecione..</option>
+					        <option value="1">Tecnologia da Informação</option>
+					        <option value="2">Recursos Humanos</option>
+					        <option value="3">Vendas</option>
+					        <option value="4">Web Designer</option>
+					    </select>
+					    <small class="form-text text-muted">Selecione o departamento que o Funcionário trabalha.</small>
+				  	</div>
+				  	<div class="input-group">
+				    	<input type="text*" id="horaForm" class="form-control bg-light border border-primary" placeholder="Carga Horaria*">
+				    	<div class="input-group-append">
+				  			<span class="input-group-text bg-primary text-light">Horas</span>
+				 		</div>
+				  	</div>
+				</form>
+				<div class="input-group mb-3">
+				    <div class="input-group-prepend">
+				    	<span class="input-group-text bg-primary text-light">R$</span>
+				  	</div>
+				  	<input type="text*" id="salarioForm" class="form-control border border-primary bg-light" aria-label="Amount (Real)" placeholder = "Infome o Salário*">
+				  	<div class="input-group-append">
+				  		<span class="input-group-text bg-primary text-light">.00</span>
+				 	</div>
+				</div>
+				<div class="text-center col-md-3 mt-md-3 pl-md-0">
+					<button type="button" id="limparForm" class="btn-lg btn-block btn customer btn-outline-warning text-light" onclick="apagaForm()" value="Limpar Tela">Limpar Tela</button>
+				</div>
+				<div class="text-center col-md-9 mt-md-3 pr-md-0">
+					<button type="button" id="gerarHolerite" class="btn-lg btn-block btn btn-outline-primary bg-primary text-light">Gerar Holerite</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="rodepe-site">
+		<div class="row">
+			<div class="col-md-12 card text-white bg-dark" style="max-width: 100%; position:absolute; bottom:0;">
+			  	<div class="card-header text-center">Criado Por: Jonatas Pedroso - IcozWeb</div>
+				<div class="card-body">
+			    	<h5 class="card-title text-center">Informações Importantes</h5>
+			    	<p class="card-text text-center">Todos os dados com * é Obrigatorio então não se esqueça de informar antes de clicar no botão gerar Holerite.<br>
+			    		Para mais informações acesse: <a class="badge badge-primary p-2 fab fa-github" href="https://github.com/JhownP" target=“_blank”> &nbspGitHub</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
