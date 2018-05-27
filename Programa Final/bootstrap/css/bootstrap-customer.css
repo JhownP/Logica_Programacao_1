@@ -1,0 +1,7 @@
+.customer{
+	background-color: #ff8b23 !important;
+}
+
+.customer:hover{
+	background-color: #ff6000 !important;
+}
